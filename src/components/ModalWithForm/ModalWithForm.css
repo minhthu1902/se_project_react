@@ -13,12 +13,11 @@
 }
 
 .modal__title {
-  font-family: "Cabinet Grotesk";
+  font-family: "CabinetGrotesk";
   margin: 0;
   font-size: 16px;
   font-weight: 700;
   line-height: 20px;
-  margin-bottom: 24px;
 }
 .modal_opened {
   visibility: visible;
@@ -41,7 +40,7 @@
 }
 
 .modal__content {
-  font-family: "Cabinet Grotesk";
+  font-family: "CabinetGrotesk";
   position: relative;
   background-color: #fff;
   max-width: 496px;
@@ -71,8 +70,11 @@
 }
 
 .modal__legend {
-  font-family: "Cabinet Grotesk";
+  font-family: "CabinetGrotesk";
   font-weight: 700;
+  margin-bottom: 20px;
+  font-size: 16px;
+  line-height: 20px;
 }
 .modal__label {
   width: 100%;
@@ -80,7 +82,7 @@
   top: 265px;
   left: 500px;
   margin-bottom: 24px;
-  font-family: "Cabinet Grotesk";
+  font-family: "CabinetGrotesk";
   font-weight: 700;
   size: 16px;
   line-height: 20px;
