@@ -49,7 +49,7 @@ function App() {
       <ModalWithForm
         title="New garment"
         buttonText="Add garment"
-        activeModal={activeModal}
+        isOpen={activeModal === "add-garment"}
         onClose={closeActiveModal}
       >
         <label htmlFor="name" className="modal__label">
@@ -72,42 +72,51 @@ function App() {
         </label>
         <fieldset className="modal__radio-buttons">
           <legend className="modal__legend">Select the weather type:</legend>
-          <label htmlFor="Hot" className="modal__label modal__label_type_radio">
-            <input
-              id="Hot"
-              type="radio"
-              className="modal__radio-input"
-              name="weatherType"
-              value="Hot"
-            />{" "}
-            Hot
-          </label>
-          <label
-            htmlFor="Warm"
-            className="modal__label modal__label_type_radio"
-          >
-            <input
-              id="Warm"
-              type="radio"
-              className="modal__radio-input"
-              name="weatherType"
-              value="Warm"
-            />{" "}
-            Warm
-          </label>
-          <label
-            htmlFor="Cold"
-            className="modal__label modal__label_type_radio"
-          >
-            <input
-              id="Cold"
-              type="radio"
-              className="modal__radio-input"
-              name="weatherType"
-              value="Cold"
-            />{" "}
-            Cold
-          </label>
+          <div>
+            <label
+              htmlFor="Hot"
+              className="modal__label modal__label_type_radio"
+            >
+              <input
+                id="Hot"
+                type="radio"
+                className="modal__radio-input"
+                name="weatherType"
+                value="Hot"
+              />{" "}
+              Hot
+            </label>
+          </div>
+          <div>
+            <label
+              htmlFor="Warm"
+              className="modal__label modal__label_type_radio"
+            >
+              <input
+                id="Warm"
+                type="radio"
+                className="modal__radio-input"
+                name="weatherType"
+                value="Warm"
+              />{" "}
+              Warm
+            </label>
+          </div>
+          <div>
+            <label
+              htmlFor="Cold"
+              className="modal__label modal__label_type_radio"
+            >
+              <input
+                id="Cold"
+                type="radio"
+                className="modal__radio-input"
+                name="weatherType"
+                value="Cold"
+              />{" "}
+              Cold
+            </label>
+          </div>
         </fieldset>
       </ModalWithForm>
       <ItemModal
