@@ -14,7 +14,7 @@ import Profile from "../Profile/Profile.jsx";
 import AddItemModal from "../AddItemModal/AddItemModal.jsx";
 import DeleteConfirmModal from "../DeleteConfirmModal/DeleteConfirmModal";
 import ClothesSection from "../ClothesSection/ClothesSection.jsx";
-import { getItems, deleteItem, addItem } from "../../utils/Api.js";
+import { getItems } from "../../utils/Api.js";
 import CurrentTemperatureUnitContext from "../../utils/contexts/CurrentTemperatureUnitContext.jsx";
 
 function App() {
@@ -36,31 +36,38 @@ function App() {
   };
   const closeActiveModal = () => {
     setActiveModal("");
-    setIsDeleteConfirmModalOpen(false); //close delete confirm modal
-    setItemToDelete(null); //reset item to delete state
+    // setIsDeleteConfirmModalOpen(false); //close delete confirm modal
+    // setItemToDelete(null); //reset item to delete state
   };
 
   const [clothingItems, setClothingItems] = useState([]);
-  const [temp, setTemp] = useState(0);
+  // const [temp, setTemp] = useState(0);
   const [currentTemperatureUnit, setCurrentTemperatureUnit] = useState("F");
-  const [isWeatherDataLoading, setIsWeatherDataLoading] = useState(true);
-  const [isDeleteConfirmModalOpen, setIsDeleteConfirmModalOpen] =
-    useState(false);
-  const [itemToDelete, setItemToDelete] = useState(null);
+  // const [isWeatherDataLoading, setIsWeatherDataLoading] = useState(true);
+  // const [isDeleteConfirmModalOpen, setIsDeleteConfirmModalOpen] =
+  //   useState(false);
+  // const [itemToDelete, setItemToDelete] = useState(null);
 
   const handleToggleSwitchChange = () => {
     if (currentTemperatureUnit === "C") setCurrentTemperatureUnit("F");
     if (currentTemperatureUnit === "F") setCurrentTemperatureUnit("C");
   };
+  const handleAddItemModalSubmit = (name, imageUrl, weather) => {
+    setClothingItems((prevItems) => [
+      { name, link: imageUrl, weather },
+      ...prevItems,
+    ]);
+    closeActiveModal();
+  };
 
-  // useEffect(() => {
-  //   getWeather(coordinates, APIkey)
-  //     .then((data) => {
-  //       const filteredData = filterWeatherData(data);
-  //       setWeatherData(filteredData);
-  //     })
-  //     .catch(console.error);
-  // }, []);
+  useEffect(() => {
+    getWeather(coordinates, APIkey)
+      .then((data) => {
+        const filteredData = filterWeatherData(data);
+        setWeatherData(filteredData);
+      })
+      .catch(console.error);
+  }, []);
   useEffect(() => {
     getItems()
       .then((data) => {
@@ -83,7 +90,7 @@ function App() {
 
           <Routes>
             <Route
-              path="/"
+              path="/se_project_react/"
               element={
                 <Main
                   weatherData={weatherData}
@@ -111,7 +118,7 @@ function App() {
           buttonText="Add garment"
           isOpen={activeModal === "add-garment"}
           onClose={closeActiveModal}
-          onAddItemModalSubmit={handAddItemModalSubmit}
+          onAddItemModalSubmit={handleAddItemModalSubmit}
         />
         <ItemModal
           activeModal={activeModal}

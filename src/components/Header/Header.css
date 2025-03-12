@@ -41,7 +41,7 @@
   text-align: left;
 }
 .header__user-container {
-  gap: 12px;
+  /* gap: 12px; */
   align-items: center;
   display: flex;
 }
