@@ -1,5 +1,5 @@
-import SideBar from "./SideBar";
-import ClothesSection from "./ClothesSection/ClothesSection.jsx";
+import SideBar from "../SideBar/SideBar";
+import ClothesSection from "../ClothesSection/ClothesSection.jsx";
 import "./Profile.css";
 
 function Profile({

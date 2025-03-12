@@ -25,6 +25,9 @@
   /* width: 116px; */
   /* height: 24px; */
 }
+.header__add-clothes-btn:hover {
+  cursor: pointer;
+}
 
 .header__date-and-location {
   height: 24px;
