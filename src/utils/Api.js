@@ -6,8 +6,8 @@ function getItems() {
   });
 }
 
-function deleteCard(cardId) {
-  return fetch(`${baseUrl}/cards/${cardId}`, {
+function deleteCard(itemId) {
+  return fetch(`${baseUrl}/items/${itemId}`, {
     method: "DELETE",
     headers: { "Content-Type": "application/json" },
   }).then((res) => {
