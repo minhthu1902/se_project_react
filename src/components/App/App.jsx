@@ -27,6 +27,7 @@ function App() {
 
   const [activeModal, setActiveModal] = useState("");
   const [selectedCard, setSelectedCard] = useState({});
+  const [cardToDelete, setCardToDelete] = useState(null);
   const handleCardClick = (card) => {
     setActiveModal("preview");
     setSelectedCard(card);
@@ -47,10 +48,9 @@ function App() {
       : setCurrentTemperatureUnit("F");
   };
   const handleAddItemModalSubmit = ({ name, imageUrl, weather }) => {
-    const newItem = { name, imageUrl, weather, _id: Date.now() };
-    AddItemModal({ name, imageUrl, weather })
-      .then((newItem) => {
-        setClothingItems([newItem, ...clothingItems]);
+    addItem({ name, imageUrl, weather })
+      .then((res) => {
+        setClothingItems([res, ...clothingItems]);
         closeActiveModal();
       })
       .catch(console.error);
@@ -58,13 +58,13 @@ function App() {
   const handleDeleteClick = () => {
     setActiveModal("delete-garment");
   };
-  const handleCardDelete = (itemId) => {
-    deleteCard(itemId)
+  const handleCardDelete = () => {
+    deleteCard(cardToDelete._id)
       .then(() => {
-        setClothingItems(([item, ...clothingItems]) =>
-          [item, ...clothingItems].filter((item) => item._id !== itemId)
+        setClothingItems((cards) =>
+          cards.filter((item) => item._id !== cardToDelete._id)
         );
-        // setSelectedCard({});
+        setCardToDelete(null);
         closeActiveModal();
       })
       .catch(console.error);

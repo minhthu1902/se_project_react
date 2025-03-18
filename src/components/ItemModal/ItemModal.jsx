@@ -8,17 +8,16 @@ function ItemModal({ activeModal, onClose, card, onDelete }) {
           {/* {" "}
           CLOSE{" "} */}
         </button>
-        <img src={card.imageUrl} alt="clothes" className="modal__image" />
+        <img src={card.imageUrl} alt={card.name} className="modal__image" />
         <div className="modal__footer">
           <h2 className="modal__caption">{card.name}</h2>
           <p className="modal__weather">Weather: {card.weather}</p>
           <div className="modal__delete">
             <button
-              onClick={onDelete}
+              onClick={() => onDelete(card)}
               type="button"
               className="modal__delete-btn"
             >
-              {" "}
               Delete Item
             </button>
           </div>

@@ -25,14 +25,14 @@ export default function AddItemModal({
   const handleSubmit = (e) => {
     e.preventDefault();
     onAddItemModalSubmit({ name, imageUrl, weather });
-    useEffect(() => {
+  };
+  useEffect(() => {
+    if (isOpen) {
       setName("");
       setImageUrl("");
       setWeather("");
-    }),
-      [isOpen];
-  };
-
+    }
+  }, [isOpen]);
   return (
     <ModalWithForm
       title="New Garment"

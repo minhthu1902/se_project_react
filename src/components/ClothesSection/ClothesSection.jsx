@@ -17,16 +17,17 @@ function ClothesSection({ clothingItems, handleCardClick, handleAddClick }) {
         </button>
       </div>
       <ul className="clothes-section__list">
-        {clothingItems?.map((item) => {
-          return (
-            <ItemCard
-              key={item._id}
-              item={item}
-              // TODO - pass as prop
-              onCardClick={handleCardClick}
-            />
-          );
-        })}
+        {clothesItems &&
+          clothingItems.map((item) => {
+            return (
+              <ItemCard
+                key={item._id}
+                item={item}
+                // TODO - pass as prop
+                onCardClick={handleCardClick}
+              />
+            );
+          })}
       </ul>
     </div>
   );

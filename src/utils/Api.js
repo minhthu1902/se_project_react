@@ -6,8 +6,8 @@ function getItems() {
   });
 }
 
-function deleteCard(itemId) {
-  return fetch(`${baseUrl}/items/${itemId}`, {
+function deleteCard(id) {
+  return fetch(`${baseUrl}/items/${id}`, {
     method: "DELETE",
     headers: { "Content-Type": "application/json" },
   }).then((res) => {
@@ -16,6 +16,7 @@ function deleteCard(itemId) {
 }
 
 function addItem({ name, imageUrl, weather }) {
+  console.log(name, imageUrl, weather);
   return fetch(`${baseUrl}/items`, {
     method: "POST",
     headers: { "Content-Type": "application/json" },
