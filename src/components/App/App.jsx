@@ -103,7 +103,7 @@ function App() {
 
           <Routes>
             <Route
-              path="/se_project_react/"
+              path="/"
               element={
                 <Main
                   weatherData={weatherData}
