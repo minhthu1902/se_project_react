@@ -4,6 +4,9 @@
   height: 326px;
   justify-content: center;
   position: relative;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+  cursor: pointer;
 }
 
 .card__name {
@@ -11,13 +14,14 @@
   margin: 0;
   border-radius: 4px 0px 0px 0px;
   background: rgba(255, 255, 255, 1);
-  font-family: "Cabinet Grotesk" sans-serif;
+  font-family: "CabinetGrotesk" sans-serif;
   font-size: 16px;
   font-weight: 100;
   line-height: 20px;
   text-align: center;
   top: 15px;
   gap: 0;
+  opacity: 60%;
 }
 .card__image {
   width: 100%;

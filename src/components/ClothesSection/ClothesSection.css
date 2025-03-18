@@ -1,24 +1,29 @@
-.clothes-section {
-  display: row;
+.clothes__section {
+  width: 100%;
 }
 
-.items-section {
+.clothes__caption .Item__label {
   display: flex;
-  font-family: "Cabinet Grotesk-Bold";
+  font-family: "CabinetGrotesk-Bold";
+  font-size: 20px;
+  font-weight: 700;
+  gap: 10px;
 }
 
-.items__label {
+.clothes__text {
   padding-right: 20px;
 }
 
-.items__button {
+.clothes__button {
   border: none;
   background: none;
   color: grey;
   cursor: pointer;
+  margin: 0;
+  padding: 0;
 }
 
-.clothes-section__items {
+.clothes-section__list {
   display: flex;
   flex-wrap: wrap;
   margin: 0;

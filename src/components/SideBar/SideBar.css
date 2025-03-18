@@ -1,17 +1,20 @@
 .sidebar {
   display: flex;
   flex-direction: column;
+  width: 229px;
 }
 
 .sidebar__username {
-  font-family: "CabinetGrostesk";
+  font-family: "CabinetGrotesk", sans-serif;
   font-size: 20px;
   font-weight: 700;
   margin: 0;
   line-height: 25px;
   padding-top: 16px;
+  align-self: center;
 }
 .sidebar__avatar {
   width: 56px;
   height: 56px;
+  align-self: center;
 }

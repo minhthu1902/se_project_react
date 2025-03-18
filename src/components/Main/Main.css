@@ -6,6 +6,11 @@
   list-style-type: none;
   gap: 21px;
 }
-.main {
-  flex-grow: 1;
+.cards__text {
+  font-family: "CabinetGrotesk", sans-serif;
+  font-weight: 700;
+  line-height: 24px;
+  margin: 0;
+  padding: 10px 0 34px;
+  font-size: 20px;
 }
