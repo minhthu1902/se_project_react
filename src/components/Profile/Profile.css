@@ -13,3 +13,7 @@
   padding-top: 20px;
   max-height: fit-content;
 }
+
+.profile__clothes-section {
+  display: flex;
+}

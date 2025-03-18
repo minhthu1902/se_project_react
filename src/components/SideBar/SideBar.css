@@ -4,6 +4,7 @@
 }
 
 .sidebar__username {
+  font-family: "CabinetGrostesk";
   font-size: 20px;
   font-weight: 700;
   margin: 0;
@@ -13,5 +14,4 @@
 .sidebar__avatar {
   width: 56px;
   height: 56px;
-  margin-right: 16px;
 }

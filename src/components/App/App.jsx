@@ -14,7 +14,7 @@ import Profile from "../Profile/Profile.jsx";
 import AddItemModal from "../AddItemModal/AddItemModal.jsx";
 import DeleteConfirmModal from "../DeleteConfirmModal/DeleteConfirmModal";
 import ClothesSection from "../ClothesSection/ClothesSection.jsx";
-import { getItems } from "../../utils/Api.js";
+import { getItems, addItem, deleteCard } from "../../utils/Api.js";
 import CurrentTemperatureUnitContext from "../../utils/contexts/CurrentTemperatureUnitContext.jsx";
 
 function App() {
@@ -36,8 +36,6 @@ function App() {
   };
   const closeActiveModal = () => {
     setActiveModal("");
-    // setIsDeleteConfirmModalOpen(false); //close delete confirm modal
-    // setItemToDelete(null); //reset item to delete state
   };
 
   const [clothingItems, setClothingItems] = useState([]);
@@ -52,12 +50,25 @@ function App() {
     if (currentTemperatureUnit === "C") setCurrentTemperatureUnit("F");
     if (currentTemperatureUnit === "F") setCurrentTemperatureUnit("C");
   };
-  const handleAddItemModalSubmit = (name, imageUrl, weather) => {
-    setClothingItems((prevItems) => [
-      { name, link: imageUrl, weather },
-      ...prevItems,
-    ]);
-    closeActiveModal();
+  const handleAddItemModalSubmit = ({ name, imageUrl, weather }) => {
+    AddItemModal({ name, imageUrl, weather })
+      .then((newItem) => {
+        setClothingItems([...clothingItems, newItem]);
+        closeActiveModal();
+      })
+      .catch(console.error);
+  };
+  const handleDeleteClick = () => {
+    setActiveModal("delete-garment");
+  };
+  const handleCardDelete = (itemId) => {
+    deleteCard(itemId)
+      .then(() => {
+        setClothingItems(clothingItems.filter((item) => item._id !== itemId));
+        setSelectedCard({});
+        closeActiveModal();
+      })
+      .catch(console.error);
   };
 
   useEffect(() => {
@@ -68,6 +79,7 @@ function App() {
       })
       .catch(console.error);
   }, []);
+
   useEffect(() => {
     getItems()
       .then((data) => {
@@ -76,6 +88,7 @@ function App() {
       })
       .catch(console.error);
   }, []);
+
   return (
     <CurrentTemperatureUnitContext.Provider
       value={{ currentTemperatureUnit, handleToggleSwitchChange }}
@@ -105,9 +118,9 @@ function App() {
               element={
                 <Profile
                   onCardClick={handleCardClick}
-                  // clothingItems={clothingItems}
+                  clothingItems={clothingItems}
                   // onDelete={handleDeleteClick}
-                  // onAddClick={handleAddClick}
+                  onAddClick={handleAddClick}
                 />
               }
             />
@@ -124,6 +137,13 @@ function App() {
           activeModal={activeModal}
           card={selectedCard}
           onClose={closeActiveModal}
+          onDelete={handleDeleteClick}
+        />
+        <DeleteConfirmModal
+          activeModal={activeModal}
+          onClose={closeActiveModal}
+          card={selectedCard}
+          handleCardDelete={handleCardDelete}
         />
         <Footer />
       </div>

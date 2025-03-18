@@ -2,8 +2,14 @@
   display: flex;
   align-items: center;
   padding: 32px 0 28px;
+  gap: 10px;
 }
-
+.header__controls {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+  gap: 20px;
+}
 .header__logo {
   margin-right: 24px;
   font-weight: 900;
@@ -50,7 +56,6 @@
   font-family: "CabinetGrotesk", serif;
   font-size: 20px;
   line-height: 25px;
-  width: 157px;
   height: 25px;
   text-wrap: nowrap;
   margin: 0;

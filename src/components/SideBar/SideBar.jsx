@@ -1,5 +1,6 @@
+import React, { useContext } from "react";
 import avatar from "../../assets/avatar.png";
-
+import "./SideBar.css";
 function SideBar() {
   return (
     <div className="sidebar">
