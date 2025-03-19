@@ -23,11 +23,15 @@ function App() {
     temp: { F: 999 },
     city: "",
     condition: "",
+    isDay: false,
   });
 
   const [activeModal, setActiveModal] = useState("");
   const [selectedCard, setSelectedCard] = useState({});
   const [cardToDelete, setCardToDelete] = useState(null);
+  const [clothingItems, setClothingItems] = useState([]);
+  const [currentTemperatureUnit, setCurrentTemperatureUnit] = useState("F");
+
   const handleCardClick = (card) => {
     setActiveModal("preview");
     setSelectedCard(card);
@@ -38,9 +42,6 @@ function App() {
   const closeActiveModal = () => {
     setActiveModal("");
   };
-
-  const [clothingItems, setClothingItems] = useState([]);
-  const [currentTemperatureUnit, setCurrentTemperatureUnit] = useState("F");
 
   const handleToggleSwitchChange = () => {
     currentTemperatureUnit === "F"
@@ -118,7 +119,7 @@ function App() {
                 <Profile
                   onCardClick={handleCardClick}
                   clothingItems={clothingItems}
-                  // onDelete={handleDeleteClick}
+                  onDelete={handleDeleteClick}
                   onAddClick={handleAddClick}
                 />
               }

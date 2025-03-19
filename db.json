@@ -104,6 +104,18 @@
       "name": "T-Shirt",
       "weather": "hot",
       "imageUrl": "https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/wtwr-project/T-Shirt.png?etag=44ed1963c44ab19cd2f5011522c5fc09"
+    },
+    {
+      "name": "Max",
+      "imageUrl": "https://www.google.com/url?sa=i&url=https%3A%2F%2Fcolorandchic.com%2Fcolorful-winter-outfit-thats-actually-warm%2F&psig=AOvVaw2iIk4AoUBGLCw1Wu3NbzLH&ust=1742348732008000&source=images&cd=vfe&opi=89978449&ved=0CBEQjRxqFwoTCPCSo_7AkowDFQAAAAAdAAAAABAE",
+      "weather": "cold",
+      "_id": 17
+    },
+    {
+      "name": "Max",
+      "imageUrl": "https://www.google.com/url?sa=i&url=https%3A%2F%2Fcolorandchic.com%2Fcolorful-winter-outfit-thats-actually-warm%2F&psig=AOvVaw2iIk4AoUBGLCw1Wu3NbzLH&ust=1742348732008000&source=images&cd=vfe&opi=89978449&ved=0CBEQjRxqFwoTCPCSo_7AkowDFQAAAAAdAAAAABAE",
+      "weather": "cold",
+      "_id": 18
     }
   ]
 }

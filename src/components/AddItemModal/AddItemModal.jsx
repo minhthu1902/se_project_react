@@ -6,6 +6,7 @@ export default function AddItemModal({
   onClose,
   isOpen,
   onAddItemModalSubmit,
+  handleAddItemModalSubmit,
 }) {
   const [name, setName] = useState("");
   const [imageUrl, setImageUrl] = useState("");
@@ -42,7 +43,6 @@ export default function AddItemModal({
       onSubmit={handleSubmit}
     >
       <label htmlFor="name" className="modal__label">
-        {" "}
         Name
         <input
           type="text"

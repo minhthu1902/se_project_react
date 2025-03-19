@@ -17,7 +17,7 @@ function ClothesSection({ clothingItems, handleCardClick, handleAddClick }) {
         </button>
       </div>
       <ul className="clothes-section__list">
-        {clothesItems &&
+        {clothingItems &&
           clothingItems.map((item) => {
             return (
               <ItemCard
