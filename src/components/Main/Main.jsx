@@ -9,7 +9,7 @@ import CurrentTemperatureUnitContext from "../../utils/contexts/CurrentTemperatu
 function Main({ weatherData, handleCardClick, clothingItems }) {
   const { currentTemperatureUnit } = useContext(CurrentTemperatureUnitContext);
   return (
-    <main>
+    <main className="main">
       <WeatherCard weatherData={weatherData} />
       <section className="cards">
         <p className="cards__text">

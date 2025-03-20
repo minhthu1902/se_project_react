@@ -31,6 +31,11 @@ function App() {
   const [cardToDelete, setCardToDelete] = useState(null);
   const [clothingItems, setClothingItems] = useState([]);
   const [currentTemperatureUnit, setCurrentTemperatureUnit] = useState("F");
+  const [isLoading, setIsLoading] = useState(false);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const handleOpenModal = () => {
+    setIsModalOpen(true);
+  };
 
   const handleCardClick = (card) => {
     setActiveModal("preview");
@@ -150,100 +155,5 @@ function App() {
     </CurrentTemperatureUnitContext.Provider>
   );
 }
-
-// function App() {
-//   const [weatherData, setWeatherData] = useState({
-//     type: "",
-//     temp: { F: 999, C: 999 },
-//     city: "",
-//   });
-//   const [activeModal, setActiveModal] = useState("");
-//   const [selectedCard, setSelectedCard] = useState({});
-//   const [temp, setTemp] = useState(0);
-//   const [CurrentTemperatureUnit, setCurrentTemperatureUnit] = useState("F");
-//   const [clothingItems, setClothingItems] = useState([]);
-//   const [addClothingItems, setAddClothingItems] = useState([]);
-
-//   const handleCardClick = (card) => {
-//     setActiveModal("preview");
-//     setSelectedCard(card);
-//   };
-
-//   const handleAddClick = () => {
-//     setActiveModal("add-garment");
-//   };
-
-//   const closeActiveModal = () => {
-//     setActiveModal("");
-//   };
-
-//   const onAddItem = (name, imageUrl, weather) => {
-//     console.log({ name, imageUrl, weather });
-//   };
-//   const handleToggleSwitchChange = () => {
-//     if (CurrentTemperatureUnit === "C") setCurrentTemperatureUnit("F");
-//     if (CurrentTemperatureUnit === "F") setCurrentTemperatureUnit("C");
-//   };
-
-//   useEffect(() => {
-//     getWeather(coordinates, APIkey)
-//       .then((data) => {
-//         const filteredData = filterWeatherData(data);
-//         setWeatherData(filteredData);
-//       })
-//       .catch(console.error);
-//   }, []);
-
-//   useEffect(() => {
-//     getItems()
-//       .then((data) => {
-//         console.log(data);
-//         setClothingItems(data);
-//       })
-//       .catch(console.error);
-//   }, []);
-
-//   return (
-//     <div className="page">
-//       <CurrentTemperatureUnitContext.Provider
-//         value={{ CurrentTemperatureUnit, handleToggleSwitchChange }}
-//       >
-//         <div className="page__content">
-//           <Header handleAddClick={handleAddClick} weatherData={weatherData} />
-//           <Routes>
-//             <Route
-//               path="/"
-//               element={
-//                 <Main
-//                   clothingItems={clothingItems}
-//                   weatherData={weatherData}
-//                   handleCardClick={handleCardClick}
-//                 />
-//               }
-//             ></Route>
-//             <Route
-//               path="/profile"
-//               element={<Profile onCardClick={handleCardClick} />}
-//             ></Route>
-//           </Routes>
-//           <Footer />
-//         </div>
-//         ;
-//         {activeModal === "add-garment" && (
-//           <AddItemModal
-//             closeActiveModal={closeActiveModal}
-//             isOpen={activeModal === "add-garment"}
-//             onAddItem={onAddItem}
-//           />
-//         )}
-//         <ItemModal
-//           activeModal={activeModal}
-//           card={selectedCard}
-//           onClose={closeActiveModal}
-//         />
-//       </CurrentTemperatureUnitContext.Provider>
-//     </div>
-//   );
-// }
 
 export default App;

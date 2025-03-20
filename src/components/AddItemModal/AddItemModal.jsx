@@ -6,7 +6,6 @@ export default function AddItemModal({
   onClose,
   isOpen,
   onAddItemModalSubmit,
-  handleAddItemModalSubmit,
 }) {
   const [name, setName] = useState("");
   const [imageUrl, setImageUrl] = useState("");
