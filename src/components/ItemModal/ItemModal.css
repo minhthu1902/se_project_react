@@ -5,12 +5,16 @@
   height: 100%;
   width: 100%;
   overflow: hidden;
-  background-image: url(../../assets/closeicon.png);
+  background: url(../../assets/closeIconWhite.svg) center no-repeat;
   background-color: transparent;
   border: none;
   cursor: pointer;
   top: 24px;
   right: 24px;
+}
+
+.modal__close-preview {
+  z-index: 10;
 }
 
 .modal__image {
@@ -21,37 +25,42 @@
   width: 100%;
   border-radius: 16px 16px 0px 0px;
 }
-
-.modal__weather {
-  font-family: "CabinetGrotesk", sans-serif;
+.modal__footer-caption {
+  /* position: absolute; */
+  font-family: "Cabinet Grotesk";
   font-size: 20px;
   font-weight: 700;
   line-height: 24px;
   margin: 0;
+}
+.modal__weather {
+  position: absolute;
 }
 
 .modal__caption {
-  font-family: "CabinetGrotesk", sans-serif;
-  font-size: 20px;
-  font-weight: 700;
-  line-height: 24px;
-  margin: 0;
-  padding-top: 20px;
-  padding-bottom: 12px;
+  background-color: #f5f5f5;
+  /* padding-top: 20px;
+  padding-bottom: 12px; */
 }
 
 .modal__footer {
+  position: relative;
+  display: flex;
+  padding: 24px;
+  background-color: #f5f5f5;
   padding-left: 32px;
   padding-bottom: 69px;
-  display: flex;
-  flex-direction: column;
+  background-color: white;
+  gap: 0;
 }
 .modal__delete-btn {
+  /* position: relative;
+  display: flex; */
+  align-items: center;
   border-style: none;
-  background-color: #fff;
   padding: 0;
   color: #ff4d00;
-  font-family: "CabinetGrotesk", sans-serif;
+  font-family: "Cabinet Grotesk";
   font-weight: 700;
   font-size: 20px;
   line-height: 24px;

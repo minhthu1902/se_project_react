@@ -1,11 +1,11 @@
 import "./DeleteConfirmModal.css";
 
-function DeleteConfirmModal({ onClose, card, activeModal, handleCardDelete }) {
+function DeleteConfirmModal({ activeModal, onClose, handleCardDelete }) {
   return (
     <div
       className={`modal ${
-        activeModal === "delete-garment"
-      } ? "modal_opened" : ""}`}
+        activeModal === "delete-garment" ? "modal_opened" : ""
+      }`}
     >
       <div className="modal__content modal__content_type_confirm">
         <button
@@ -20,7 +20,8 @@ function DeleteConfirmModal({ onClose, card, activeModal, handleCardDelete }) {
         </p>
         <div className="modal__button">
           <button
-            onClick={() => handleCardDelete(card._id)}
+            // onClick={() => handleCardDelete(card._id)}
+            onClick={handleCardDelete}
             type="button"
             className="modal__confirm-button"
           >
