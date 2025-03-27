@@ -1,68 +1,86 @@
 .modal__content_type_image {
   padding: 0;
-  max-width: 498px;
-  max-height: 610px;
-  height: 100%;
-  width: 100%;
+  width: 498px;
+  height: 610px;
   overflow: hidden;
-  background: url(../../assets/closeIconWhite.svg) center no-repeat;
-  background-color: transparent;
+
+  background-color: white;
   border: none;
-  cursor: pointer;
+  /* cursor: pointer;
   top: 24px;
-  right: 24px;
+  right: 24px; */
 }
 
 .modal__close-preview {
-  z-index: 10;
+  background: url(../../assets/closeIconGrey.svg.svg) center no-repeat;
+  background-color: red;
+  border: none;
+  cursor: pointer;
+  z-index: 1000;
 }
 
 .modal__image {
+  background: url(../../assets/closeIconGrey.svg.svg) no-repeat;
   gap: 0px;
   left: 471px;
   top: 106px;
   height: 498px;
-  width: 100%;
-  border-radius: 16px 16px 0px 0px;
+  width: 498px;
+  border-top-left-radius: 16px;
+  border-top-right-radius: 16px;
 }
 .modal__footer-caption {
-  /* position: absolute; */
   font-family: "Cabinet Grotesk";
   font-size: 20px;
-  font-weight: 700;
-  line-height: 24px;
+  font-weight: 500;
   margin: 0;
+  width: auto;
 }
 .modal__weather {
-  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  width: 200px;
 }
 
 .modal__caption {
-  background-color: #f5f5f5;
-  /* padding-top: 20px;
-  padding-bottom: 12px; */
+  padding: 0;
+  margin: 0;
+  font-family: "Cabinet Grotesk";
 }
 
 .modal__footer {
-  position: relative;
   display: flex;
-  padding: 24px;
-  background-color: #f5f5f5;
-  padding-left: 32px;
-  padding-bottom: 69px;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  /* those three above will align its children horizontally  and distribute them with space in between*/
+  padding: 2px 32px 0px 32px;
   background-color: white;
+  height: 112px;
   gap: 0;
+  box-sizing: border-box;
+  width: 100%;
+}
+.modal__delete {
+  display: flex;
+  flex-direction: column;
+  margin-right: 20;
+  width: auto;
+  height: auto;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
 }
 .modal__delete-btn {
-  /* position: relative;
-  display: flex; */
-  align-items: center;
-  border-style: none;
   padding: 0;
   color: #ff4d00;
   font-family: "Cabinet Grotesk";
-  font-weight: 700;
+  font-weight: 500;
   font-size: 20px;
   line-height: 24px;
   cursor: pointer;
+  width: 200px;
+  background-color: white;
+  border: none;
 }

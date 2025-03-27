@@ -8,9 +8,9 @@
 .clothes__caption .Item__label {
   display: flex;
   flex-direction: row;
-  font-family: "CabinetGrotesk-Bold";
+  font-family: "Cabinet Grotesk";
   font-size: 20px;
-  font-weight: 700;
+  font-weight: 500;
   gap: 10px;
 }
 
@@ -19,6 +19,9 @@
 }
 
 .clothes__button {
+  font-family: "Cabinet Grotesk";
+  font-size: 20px;
+  font-weight: 500;
   border: none;
   background: none;
   color: grey;
@@ -28,11 +31,14 @@
 }
 
 .clothes-section__list {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
   flex-direction: row;
   margin: 0;
   padding: 0;
   list-style-type: none;
   gap: 21px;
   position: relative;
+  object-fit: cover;
 }

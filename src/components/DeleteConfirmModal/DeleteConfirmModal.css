@@ -2,28 +2,37 @@
   max-width: 670px;
 }
 .modal__content_type_confirm {
+  font-family: "Cabinet Grotesk";
+  font-weight: 500;
+  font-size: 20px;
   position: relative;
   flex-direction: column;
   width: 670px;
   height: 280px;
-  background-color: rgba(0, 0, 0, 0.5);
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: white;
 }
 
 .modal__confirm-caption .modal__confirm-caption-confirmation {
-  font-family: "CabinetGrotesk", sans-serif;
-  font-weight: 700;
+  font-family: "Cabinet Grotesk";
+  font-weight: 500;
   font-size: 20px;
   line-height: 24px;
   margin: 0;
 }
-.modal__button {
+
+.modal__confirm-button {
   display: flex;
   flex-direction: column;
   align-items: center;
+  color: red;
+  background: transparent;
+  border: none;
+  cursor: pointer;
 }
+
 /* modal close button */
 .modal__close {
   position: absolute;
@@ -35,7 +44,12 @@
   z-index: 1001;
   margin: 0;
 }
-
-.modal__button:hover {
+.modal__cancel-button {
+  column-gap: 48px;
+  padding-left: 40px;
+  background: transparent;
+  border: none;
   cursor: pointer;
+  z-index: 1001;
+  margin: 0;
 }

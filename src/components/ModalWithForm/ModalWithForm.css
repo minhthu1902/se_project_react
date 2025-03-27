@@ -13,7 +13,7 @@
 }
 
 .modal__title {
-  font-family: "CabinetGrotesk";
+  font-family: "Cabinet Grotesk";
   margin: 0;
   font-size: 16px;
   font-weight: 700;
@@ -26,21 +26,21 @@
   width: 20px;
   height: 20px;
   position: absolute;
-  background: url(../../assets/closeicon.png) center no-repeat;
+  background-image: url(../../assets/closeIconGrey.svg);
+  background-size: cover;
   border: none;
   top: 20px;
   right: 28px;
-  transform: rotate(90deg);
-  transition: opacity 0.3s ease;
+  /* transform: rotate(90deg);
+  transition: opacity 0.3s ease; */
   cursor: pointer;
-  color: black;
 }
-.modal__close_content_image {
+/* .modal__close_content_image {
   background: url(../../assets/closeicon.png) center no-repeat;
-}
+} */
 
 .modal__content {
-  font-family: "CabinetGrotesk";
+  font-family: "Cabinet Grotesk";
   position: relative;
   background-color: #fff;
   max-width: 496px;
@@ -70,8 +70,8 @@
 }
 
 .modal__legend {
-  font-family: "CabinetGrotesk";
-  font-weight: 700;
+  font-family: "Cabinet Grotesk";
+  font-weight: 500;
   margin-bottom: 20px;
   font-size: 16px;
   line-height: 20px;
@@ -82,8 +82,8 @@
   top: 265px;
   left: 500px;
   margin-bottom: 24px;
-  font-family: "CabinetGrotesk";
-  font-weight: 700;
+  font-family: "Cabinet Grotesk";
+  font-weight: 500;
   size: 16px;
   line-height: 20px;
   margin-top: 10px;

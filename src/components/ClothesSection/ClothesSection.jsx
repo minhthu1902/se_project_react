@@ -1,19 +1,19 @@
-import { useContext } from "react";
+// import { useContext } from "react";
 import "./ClothesSection.css";
 import ItemCard from "../ItemCard/ItemCard";
 // import { defaultClothingItems } from "../../utils/constants";
 
 function ClothesSection({
-  onCardClick,
+  // onCardClick,
   clothingItems,
   handleAddClick,
   handleCardClick,
-  handleOpenModal,
+  // handleOpenModal,
 }) {
   return (
     <div className="clothes-section">
       <div className="clothes__caption">
-        <p className="Item__label">Your Item</p>
+        <p className="Item__label">Your Items</p>
         <button
           onClick={handleAddClick}
           type="submit"
@@ -29,7 +29,8 @@ function ClothesSection({
               key={item._id}
               item={item}
               // TODO - pass as prop
-              onCardClick={onCardClick}
+              onCardClick={handleCardClick}
+              handleCardClick={handleCardClick}
             />
           );
         })}

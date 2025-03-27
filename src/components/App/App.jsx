@@ -146,6 +146,7 @@ function App() {
           card={selectedCard}
           onClose={closeActiveModal}
           onDelete={handleDeleteClick}
+          onCardClick={handleCardClick}
         />
         <DeleteConfirmModal
           activeModal={activeModal}

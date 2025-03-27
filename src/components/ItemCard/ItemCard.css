@@ -1,25 +1,24 @@
 .card {
+  align-items: center;
   display: flex;
-  flex-direction: row;
-  width: 323px;
-  height: 326px;
-  justify-content: center;
+  width: 325px;
+  height: 328px;
   position: relative;
-  border: 1px solid rgba(0, 0, 0, 0.3);
-  overflow: hidden;
   cursor: pointer;
+  justify-content: center;
+  margin-bottom: 19px;
+  /* flex-wrap: wrap; */
 }
 
 .card__name {
   position: absolute;
   margin: 0;
-  border-radius: 4px 0px 0px 0px;
-  background: rgba(255, 255, 255, 1);
-  font-family: "Cabinet Grotesk" sans-serif;
+  /* background: rgba(255, 255, 255, 1); */
+  font-family: "Cabinet Grotesk";
+  justify-content: center;
   font-size: 16px;
   font-weight: 100;
   line-height: 20px;
-  text-align: center;
   top: 15px;
   gap: 0;
   opacity: 60%;

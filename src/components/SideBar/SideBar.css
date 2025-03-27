@@ -5,9 +5,9 @@
 }
 
 .sidebar__username {
-  font-family: "Cabinet Grotesk", sans-serif;
+  font-family: "Cabinet Grotesk";
   font-size: 20px;
-  font-weight: 700;
+  font-weight: 500;
   margin: 0;
   line-height: 25px;
   padding-top: 16px;

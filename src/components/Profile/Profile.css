@@ -1,11 +1,12 @@
 .profile {
   display: flex;
   flex-direction: row;
-  font-family: "CabinetGrotesk", sans-serif;
+  font-family: "Cabinet Grotesk", sans-serif;
   gap: 100px;
-  padding: 20px;
+  padding: 5px;
   max-width: 1200px;
-  margin: 47px 0 80px 0;
+  /* margin: 47px 0 80px 0; */
+  margin: 47px 0 40px 0;
 }
 
 .profile__sidebar {
