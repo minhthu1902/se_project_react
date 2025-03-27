@@ -1,13 +1,14 @@
 .card {
   align-items: center;
   display: flex;
-  width: 325px;
-  height: 328px;
+  max-width: 325px;
+  max-height: 328px;
   position: relative;
   cursor: pointer;
   justify-content: center;
   margin-bottom: 19px;
   /* flex-wrap: wrap; */
+  list-style-type: none;
 }
 
 .card__name {
