@@ -1,7 +1,8 @@
 .footer {
-  max-width: 1358px;
+  padding-top: 171px;
+  /* max-width: 1358px; */
   display: flex;
-  max-height: 20px;
+  /* max-height: 20px; */
   font-size: 16px;
   font-weight: 500;
   padding: 0;
@@ -13,18 +14,21 @@
   justify-content: space-between;
   list-style-type: none;
 }
-.footer__copyright .footer__year {
+.footer__copyright {
   font-family: "Cabinet Grotesk";
   font-size: 16px;
-  font-weight: 700;
+  font-weight: 500;
   line-height: 20px;
   text-align: left;
-  text-underline-position: from-font;
 }
 .footer__year {
+  font-family: "Cabinet Grotesk";
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 20px;
   text-align: right;
 }
-/* @media (max-width: 768px) {
+@media (max-width: 768px) {
   .footer {
     width: 0.8rem;
     height: 0.8rem;
@@ -52,4 +56,4 @@
   .footer__year {
     display: flex;
   }
-} */
+}

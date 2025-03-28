@@ -1,4 +1,5 @@
 import "./ModalWithForm.css";
+import ItemModal from "../ItemModal/ItemModal";
 
 function ModalWithForm({
   children,
@@ -13,9 +14,12 @@ function ModalWithForm({
     <div className={`modal ${isOpen ? "modal_opened" : ""}`}>
       <div className="modal__content">
         <h2 className="modal__title">{title}</h2>
-        <button onClick={onClose} type="button" className="modal__close">
-          {" "}
-        </button>
+
+        <button
+          onClick={onClose}
+          type="button"
+          className="modal__close"
+        ></button>
         <form onSubmit={onSubmit} className="modal__form">
           {children}
 

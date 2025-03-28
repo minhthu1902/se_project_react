@@ -11,9 +11,9 @@ function ClothesSection({
   // handleOpenModal,
 }) {
   return (
-    <div className="clothes-section">
-      <div className="clothes__caption">
-        <p className="Item__label">Your Items</p>
+    <div className="clothes__section">
+      <div className="clothes__section-caption">
+        <p className="item__label">Your Items</p>
         <button
           onClick={handleAddClick}
           type="submit"
@@ -22,14 +22,14 @@ function ClothesSection({
           + Add New Clothes
         </button>
       </div>
-      <ul className="clothes-section__list">
+      <ul className="clothes__section-list">
         {clothingItems.map((item) => {
           return (
             <ItemCard
               key={item._id}
               item={item}
               // TODO - pass as prop
-              onCardClick={handleCardClick}
+              // onCardClick={onCardClick}
               handleCardClick={handleCardClick}
             />
           );

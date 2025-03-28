@@ -5,7 +5,6 @@
   left: 0;
   right: 0;
   background-color: #0000004d;
-  display: flex;
   align-items: center;
   visibility: hidden;
   bottom: 0;
@@ -26,18 +25,16 @@
   width: 20px;
   height: 20px;
   position: absolute;
-  background-image: url(../../assets/closeIconGrey.svg);
+  background: url("../../assets/close-icon.png");
   background-size: cover;
   border: none;
   top: 20px;
   right: 28px;
-  /* transform: rotate(90deg);
-  transition: opacity 0.3s ease; */
+  list-style-type: none;
+  /* transform: rotate(90deg);*/
+  transition: opacity 0.3s ease;
   cursor: pointer;
 }
-/* .modal__close_content_image {
-  background: url(../../assets/closeicon.png) center no-repeat;
-} */
 
 .modal__content {
   font-family: "Cabinet Grotesk";

@@ -2,7 +2,7 @@
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  padding: 32px 0 18px 40px;
+  padding: 32px 0 11px 40px;
   /* gap: 10px; */
   max-width: 1360px;
   max-height: 40px;
@@ -10,12 +10,13 @@
 .header__controls {
   display: flex;
   align-items: center;
-  margin-left: auto;
+  margin-left: 0;
   gap: 20px;
+  padding-left: 650px;
 }
 .header__logo {
   margin-right: 24px;
-  font-weight: 900;
+  font-weight: 700;
   size: 32px;
   line-height: 39.68px;
   font-family: "Cabinet Grotesk";
@@ -39,9 +40,10 @@
 }
 
 .header__date-and-location {
-  height: 24px;
-  width: 160px;
+  max-height: 24px;
+  max-width: 160px;
   text-wrap: nowrap;
+  text-size-adjust: 90%;
   margin: 0;
   font-family: "Cabinet Grotesk";
   font-size: 20px;

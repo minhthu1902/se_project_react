@@ -1,7 +1,10 @@
 .sidebar {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   width: 229px;
+  max-height: 56px;
+  top: 135px;
+  position: fixed;
 }
 
 .sidebar__username {
@@ -12,6 +15,7 @@
   line-height: 25px;
   padding-top: 16px;
   align-self: center;
+  padding-left: 10px;
 }
 .sidebar__avatar {
   width: 56px;
