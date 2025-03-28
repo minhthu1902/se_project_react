@@ -89,6 +89,12 @@
       "imageUrl": "https://img.freepik.com/free-vector/watercolor-winter-clothes-essentials_23-2148716195.jpg",
       "weather": "cold",
       "_id": 20
+    },
+    {
+      "name": "Jacket",
+      "imageUrl": "https://i5.walmartimages.com/seo/Dtydtpe-Winter-Jackets-for-Men-Men-s-Autumn-Winter-Solid-Color-Long-Sleeved-Jacket-Hooded-Plush-Collar-Parkas-Jackets-for-Men_84ba48a0-caa3-4c79-b11e-385a35ebe283.4362990693fe28d11098acddd3e177f0.jpeg",
+      "weather": "cold",
+      "_id": 21
     }
   ]
 }

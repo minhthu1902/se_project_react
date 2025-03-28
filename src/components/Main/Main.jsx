@@ -16,7 +16,7 @@ function Main({ weatherData, handleCardClick, clothingItems }) {
           Today is {weatherData.temp[currentTemperatureUnit]} &deg;
           {currentTemperatureUnit} / You may want to wear:
         </p>
-        <ul className="cards_list">
+        <ul className="cards__list">
           {clothingItems
             .filter((item) => {
               return item.weather === weatherData.type;

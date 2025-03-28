@@ -1,35 +1,58 @@
 .main {
   flex-grow: 1;
+  display: flex;
+  flex-direction: column;
 }
 .cards {
+  max-width: 1360px;
+  max-height: 387px;
   gap: 10px;
   padding: 10px;
   margin: 0;
 }
 .cards__list {
-  /* display: flex;
+  display: flex;
   flex-direction: row;
-  flex-wrap: wrap; */
-  display: grid;
-  grid-template-rows: repeat(auto-fit, minmax(300px, 1fr));
-  grid-gap: 20px;
-  grid-auto-rows: 328px;
-  padding: 20px;
-  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
   list-style-type: none;
-  padding: 0;
+  padding-left: 40px;
 }
 .cards__text {
-  font-family: "Cabinet Grotesk", sans-serif;
-  font-weight: 700;
+  font-family: "Cabinet Grotesk";
   line-height: 24px;
   margin: 0;
-  padding: 10px 0 34px;
+  padding: 10px 40px 34px;
   font-size: 20px;
+  max-width: 350px;
+  max-height: 25px;
 }
+
 @media (max-width: 768px) {
+  .main {
+    max-width: 0.6rem;
+  }
+  .cards {
+    max-width: 0.8rem;
+    max-height: 0.8rem;
+  }
   .cards__list {
-    grid-template-columns: 1fr;
-    /* single column layout */
+    gap: 12px;
+    max-width: 0.7rem;
+    max-height: 0.7rem;
+  }
+}
+@media (max-width: 480px) {
+  .main {
+    max-width: 0.5rem;
+  }
+  .cards {
+    max-width: 0.3rem;
+    max-height: 0.3rem;
+  }
+  .cards__list {
+    gap: 0;
+    max-width: 0.3rem;
+    max-height: 0.3rem;
   }
 }

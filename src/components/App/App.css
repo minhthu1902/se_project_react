@@ -1,4 +1,6 @@
 .page {
+  max-width: 1440px;
+  max-height: 1000px;
   margin: 0;
   padding: 0;
   background-color: white;
@@ -14,4 +16,15 @@
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+}
+@media (max-width: 820px) {
+  .page {
+    width: 100%;
+    max-width: 820px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  .page__content {
+    width: 80%;
+  }
 }

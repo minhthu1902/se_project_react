@@ -8,6 +8,8 @@
 }
 
 .modal__radio-button {
+  display: flex;
+  flex-direction: column;
 }
 
 .modal__legend {

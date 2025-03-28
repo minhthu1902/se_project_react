@@ -1,12 +1,12 @@
 .toggle-switch {
   box-sizing: border-box;
-  border-radius: 20px;
+  border-radius: 25px;
   border: 2px solid black;
   cursor: pointer;
   overflow: hidden;
   position: relative;
-  width: 56px;
-  height: 28px;
+  width: 59px;
+  height: 30px;
   /* overflow: hidden; */
 }
 
@@ -15,8 +15,8 @@
 }
 
 .toggle-switch__circle {
-  width: 28px;
-  height: 28px;
+  width: 27px;
+  height: 27px;
   border-radius: 50%;
   background-color: black;
   position: absolute;
@@ -26,16 +26,17 @@
 .toggle-switch__checkbox:checked ~ .toggle-switch__circle {
   left: 28px;
 }
-/* .toggle-switch__checkbox:not(checked) ~ .toggle-switch__text_F {
-  color: white;
+.toggle-switch__checkbox:not(checked) ~ .toggle-switch__text_F {
+  color: black;
 }
 .toggle-switch__checkbox:checked ~ .toggle-switch__text_C {
   color: white;
-} */
+  display: flex;
+}
 .toggle-switch__text {
   position: absolute;
   top: 5px;
-  font-family: "CabinetGrostesk", sans-serif;
+  font-family: "Cabinet Grotesk", sans-serif;
   font-size: 14px;
   color: grey;
   text-align: center;
@@ -49,4 +50,22 @@
 }
 .toggle-switch__text_color_white {
   color: #fff;
+}
+
+@media (max-width: 820px) {
+  .toggle-switch {
+    width: 46px;
+    height: 25px;
+  }
+  .toggle-switch__circle {
+    width: 23px;
+    height: 23px;
+    left: 0;
+  }
+  .toggle-switch__checkbox:checked ~ .toggle-switch__circle {
+    left: 20px;
+  }
+  .toggle-switch__text {
+    font-size: 10px;
+  }
 }
