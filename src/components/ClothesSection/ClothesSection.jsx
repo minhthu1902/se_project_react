@@ -8,7 +8,6 @@ function ClothesSection({
   clothingItems,
   handleAddClick,
   handleCardClick,
-  // handleOpenModal,
 }) {
   return (
     <div className="clothes__section">
@@ -16,7 +15,7 @@ function ClothesSection({
         <p className="item__label">Your Items</p>
         <button
           onClick={handleAddClick}
-          type="submit"
+          type="button"
           className="clothes__button"
         >
           {" "}

@@ -3,14 +3,13 @@ import "./ItemModal.css";
 function ItemModal({ activeModal, card, onClose, onDelete }) {
   return (
     <div className={`modal ${activeModal === "preview" && "modal_opened"}`}>
-      <div className="modal__content modal__content_type_image">
+      <div className="modal__content">
         <button
           onClick={onClose}
           type="button"
           className="modal__close modal__close-preview"
         >
-          {/* {" "}
-          CLOSE{" "} */}
+          X{" "}
         </button>
         <img src={card.imageUrl} alt={card.name} className="modal__image" />
         <div className="modal__footer">

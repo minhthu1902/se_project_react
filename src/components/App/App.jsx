@@ -125,10 +125,10 @@ function App() {
               path="/profile"
               element={
                 <Profile
-                  onCardClick={handleCardClick}
+                  handleCardClick={handleCardClick}
                   clothingItems={clothingItems}
-                  onDelete={handleDeleteClick}
-                  onAddClick={handleAddClick}
+                  handleDeleteClick={handleDeleteClick}
+                  handleAddClick={handleAddClick}
                 />
               }
             />
@@ -146,20 +146,13 @@ function App() {
           card={selectedCard}
           onClose={closeActiveModal}
           onDelete={handleDeleteClick}
-          // onCardClick={handleCardClick}
+          handleCardClick={handleCardClick}
         />
         <DeleteConfirmModal
           activeModal={activeModal}
           onClose={closeActiveModal}
           card={selectedCard}
           handleCardDelete={handleCardDelete}
-        />
-        <ClothesSection
-          activeModal={activeModal}
-          // onCardClick={handleCardClick}
-          clothingItems={clothingItems}
-          handleAddClick={handleAddClick}
-          handleCardClick={handleCardClick}
         />
         <Footer />
       </div>

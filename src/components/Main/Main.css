@@ -28,7 +28,7 @@
   max-height: 25px;
 }
 
-@media (max-width: 768px) {
+/* @media (max-width: 768px) {
   .main {
     max-width: 0.6rem;
   }
@@ -55,4 +55,4 @@
     max-width: 0.3rem;
     max-height: 0.3rem;
   }
-}
+} */
