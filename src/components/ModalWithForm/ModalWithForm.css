@@ -25,12 +25,13 @@
   width: 20px;
   height: 20px;
   position: absolute;
-  background-image: url("../../assets/close-icon.png");
+  background-image: url("../../assets/closeIconGrey.svg");
   background-size: cover;
   border: none;
   top: 20px;
   right: 28px;
   list-style-type: none;
+  z-index: 1;
   /* transform: rotate(90deg);*/
   transition: opacity 0.3s ease;
   cursor: pointer;

@@ -8,9 +8,7 @@ function ItemModal({ activeModal, card, onClose, onDelete }) {
           onClick={onClose}
           type="button"
           className="modal__close modal__close-preview"
-        >
-          X{" "}
-        </button>
+        ></button>
         <img src={card.imageUrl} alt={card.name} className="modal__image" />
         <div className="modal__footer">
           <div className="modal__footer-caption">

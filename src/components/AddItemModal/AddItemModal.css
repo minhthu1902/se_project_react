@@ -1,4 +1,5 @@
 .modal__label {
+  background-image: url(../../assets/closeIconGrey.svg) center no-repeat;
 }
 
 .modal__label_type_radio {

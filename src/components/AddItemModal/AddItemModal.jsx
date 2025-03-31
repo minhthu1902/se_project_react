@@ -55,6 +55,8 @@ export default function AddItemModal({
         />
       </label>
       <label htmlFor="imageUrl" className="modal__label">
+        {" "}
+        Image
         <input
           type="url"
           className="modal__input"
