@@ -1,5 +1,5 @@
 .weather-card {
-  left: 40px;
+  padding: 0;
   position: relative;
   display: flex;
   height: 80px;

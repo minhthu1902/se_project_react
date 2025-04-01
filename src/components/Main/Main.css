@@ -7,8 +7,8 @@
   max-width: 1360px;
   max-height: 387px;
   gap: 10px;
-  padding: 10px;
-  margin: 0;
+  /* padding: 0; */
+  margin: auto;
 }
 .cards__list {
   display: flex;
@@ -16,13 +16,14 @@
   flex-wrap: wrap;
   gap: 20px;
   list-style-type: none;
-  padding-left: 40px;
+  padding: 0;
+  /* setting value to 0 sometimes will cancel default padding from the parent element */
 }
 .cards__text {
   font-family: "Cabinet Grotesk";
   line-height: 24px;
   margin: 0;
-  padding: 10px 40px 34px;
+  padding: 10px 0px 34px;
   font-size: 20px;
   max-width: 350px;
   max-height: 25px;

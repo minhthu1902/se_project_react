@@ -6,7 +6,6 @@
   position: relative;
   cursor: pointer;
   justify-content: center;
-  /* margin-bottom: 19px; */
   flex-wrap: wrap;
   list-style-type: none;
   background-image: url(../../assets/closeIconGrey.svg) no-repeat;
