@@ -19,3 +19,17 @@
   object-position: right top;
   width: 100%;
 }
+@media screen and (max-width: 768px) {
+}
+
+@media screen and (max-width: 480px) {
+  .weather-card {
+    display: none;
+  }
+  .weather-card__temp {
+    display: none;
+  }
+  .weather-card__image {
+    display: none;
+  }
+}
