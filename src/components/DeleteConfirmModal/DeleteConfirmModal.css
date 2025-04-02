@@ -13,6 +13,7 @@
   justify-content: center;
   align-items: center;
   background-color: white;
+  border-radius: 20px;
 }
 
 .modal__confirm-caption .modal__confirm-caption-confirmation {
@@ -21,6 +22,7 @@
   font-size: 20px;
   line-height: 24px;
   margin: 0;
+  padding-top: 60px;
 }
 
 .modal__confirm-button {
@@ -31,10 +33,14 @@
   background: transparent;
   border: none;
   cursor: pointer;
+  padding-top: 40px;
 }
 
-/* modal close button */
+/* modal close button for delete confirm modal */
 .modal__close {
+  background: transparent url("../../assets/closeIconGrey.svg") center no-repeat;
+  width: 20px;
+  height: 20px;
   position: absolute;
   top: 16px;
   right: 16px;
@@ -51,6 +57,8 @@
   cursor: pointer;
   z-index: 1001;
   margin: 0;
+  padding-top: 40px;
+  padding-bottom: 30px;
 }
 @media (max-width: 820px) {
   .modal__content {

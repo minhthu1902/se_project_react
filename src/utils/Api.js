@@ -7,6 +7,7 @@ export const checkResponse = (res) => {
     return Promise.reject(`Error: ${res.status}`);
   }
 };
+// special function for fetching and checking responses not to duplicate it in every request
 export const request = (url, options) => {
   return fetch(url, options).then(checkResponse);
 };

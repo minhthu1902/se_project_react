@@ -13,11 +13,10 @@ function DeleteConfirmModal({ activeModal, onClose, handleCardDelete }) {
           type="button"
           className="modal__close"
         ></button>
-        <p className="modal__confirm-caption">Confirm Deletion</p>
-        <p className="modal__confirm-caption-confirmation">
-          This action is irreversible.{" "}
-          <span>Are you sure you want to delete this item?</span>
-        </p>
+        <p className="modal__confirm-caption">
+          Are you sure you want to delete this item?
+        </p>{" "}
+        This action is irreversible.
         <div className="modal__button">
           <button
             // onClick={() => handleCardDelete(card._id)}

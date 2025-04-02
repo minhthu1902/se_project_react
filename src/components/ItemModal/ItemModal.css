@@ -2,17 +2,16 @@
   max-width: 498px;
   padding: 0;
   max-height: 670px;
-  /* max-height: 498px; */
   overflow: hidden;
   background-color: white;
   border: none;
   cursor: pointer;
   border-radius: 16px;
-  top: 106px;
+  /* top: 106px; */
 }
 
 .modal__close-preview {
-  background: url("../../assets/closeIconGrey.svg") center no-repeat;
+  /* background: url("../../assets/closeIconGrey.svg") center no-repeat; */
   background-color: #ff4d00;
   background-color: transparent;
   border: none;
@@ -23,10 +22,10 @@
   background: url("../../assets/closeIconGrey.svg") center no-repeat;
   display: flex;
   gap: 0px;
-
-  top: 106px;
-  height: 498px;
-  width: 498px;
+  align-items: center;
+  /* top: 106px; */
+  min-height: 490px;
+  max-width: 498px;
   border-radius: 18px;
 }
 .modal__footer-caption {
