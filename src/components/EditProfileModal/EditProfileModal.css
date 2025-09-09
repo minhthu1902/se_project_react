@@ -1,0 +1,44 @@
+/* EditProfileModal specific styles */
+.modal__label--error {
+  color: #ff0000;
+}
+
+.input-error {
+  border-color: #ff0000;
+  box-shadow: 0 0 0 1px #ff0000;
+}
+
+/* Auth switch styling for edit profile modal */
+.modal__auth-switch {
+  display: flex;
+  align-items: center;
+  margin-top: 16px;
+  gap: 2px; 
+  width: 100%;
+  flex-direction: row;
+}
+
+/* Custom submit button styling for EditProfileModal */
+.modal__submit--save {
+  width: 156px; 
+  height: 36px; 
+  border: none;
+  border-radius: 4px;
+  background: #333; /* Dark background */
+  font-weight: 500;
+  color: #fff; /* White text */
+  font-family: "Cabinet Grotesk";
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  margin: 0;
+}
+
+.modal__submit--save:hover {
+  background: #000; /* Darker on hover */
+}
+
+.modal__submit--save:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+}

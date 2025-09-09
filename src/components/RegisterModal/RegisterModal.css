@@ -1,0 +1,73 @@
+/* RegisterModal specific styles */
+.modal__label--error {
+  color: #ff0000;
+}
+
+.input-error {
+  border-color: #ff0000;
+  box-shadow: 0 0 0 1px #ff0000;
+}
+
+/* Auth switch styling to match Figma design */
+.modal__auth-switch {
+  display: flex;
+  align-items: center;
+  margin-top: 16px;
+  gap: 2px; 
+  width: 100%;
+  flex-direction: row; /* Ensure horizontal layout */
+}
+
+/* RegisterModal uses custom submit button in modal__auth-switch */
+
+/* Custom submit button styling for RegisterModal */
+.modal__submit--register {
+  width: 86px; 
+  height: 36px; 
+  border: 1px solid #e0e0e0;
+  border-radius: 4px;
+  background: #f5f5f5; /* Light gray background to match screenshot */
+  font-weight: 500;
+  color: #333; /* Dark gray text to match screenshot */
+  font-family: "Cabinet Grotesk";
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  margin: 0; /* Remove any default margins */
+}
+
+.modal__submit--register:hover {
+  background: #e8e8e8; /* Slightly darker on hover */
+}
+
+.modal__auth-link {
+  background: none;
+  border: none;
+  color: #666;
+  font-size: 16px;
+  font-family: "Cabinet Grotesk", sans-serif;
+  cursor: pointer;
+  padding: 0;
+  text-decoration: none;
+  transition: color 0.2s ease;
+  width: 80px; /* Hug (80px) */
+  height: 40px; /* Hug (40px) */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+}
+
+.modal__auth-link:hover {
+  color: #000;
+  text-decoration: underline;
+}
+
+/* Additional styling for registration form */
+.modal__input[type="url"] {
+  
+}
+
+.modal__input[type="text"] {
+  
+}

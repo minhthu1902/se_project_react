@@ -1,0 +1,20 @@
+.profile {
+  display: flex;
+  flex-direction: row;
+  font-family: "Cabinet Grotesk", sans-serif;
+  gap: 100px;
+  padding-left: 40px;
+  max-width: 1200px;
+  margin: 47px 0 40px 0;
+}
+
+.profile__sidebar {
+  display: flex;
+  gap: 20px;
+  padding-top: 20px;
+  max-height: fit-content;
+}
+
+.profile__clothes-section {
+  display: flex;
+}

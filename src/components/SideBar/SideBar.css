@@ -1,0 +1,46 @@
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 229px;
+  padding: 20px;
+  gap: 16px;
+}
+
+.sidebar__avatar {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.sidebar__username {
+  font-family: "Cabinet Grotesk";
+  font-size: 20px;
+  font-weight: 500;
+  margin: 0;
+  line-height: 25px;
+  text-align: center;
+}
+
+.sidebar__profile-action {
+  background: none;
+  border: none;
+  padding: 0;
+  font-family: "Cabinet Grotesk";
+  font-size: 20px;
+  font-weight: 700;
+  color: #000;
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+  margin-bottom: 8px;
+  text-align: left;
+}
+
+.sidebar__profile-action:hover {
+  opacity: 0.6;
+}
+
+.sidebar__profile-action_logout {
+  margin-bottom: 0;
+}
