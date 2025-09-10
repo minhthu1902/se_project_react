@@ -18,6 +18,8 @@ export default function LoginModal({
   const { values, handleChange, setValues } = useForm({
     email: "",
     password: "",
+    name: "",
+    avatar: "",
   });
 
   const [loginError, setLoginError] = useState("");
@@ -27,9 +29,14 @@ export default function LoginModal({
     e.preventDefault();
     try {
       if (isLoginMode) {
-        await onLogin(values);
+        await onLogin({ email: values.email, password: values.password });
       } else {
-        await onRegister(values);
+        await onRegister({
+          name: values.name,
+          avatar: values.avatar,
+          email: values.email,
+          password: values.password,
+        });
       }
       setWrongField("");
       setLoginError("");
@@ -54,7 +61,7 @@ export default function LoginModal({
         setLoginError("Email or password incorrect");
       } else if (status === 409) {
         setWrongField("email");
-        setLoginError("Email already exists");
+        setLoginError(isLoginMode ? "Invalid email or password" : "Email already exists");
       } else if (status === 400) {
         setWrongField("email");
         setLoginError("Invalid email or password format");
@@ -68,11 +75,11 @@ export default function LoginModal({
 
   useEffect(() => {
     if (isOpen) {
-      setValues({ email: "", password: "" });
+      setValues({ email: "", password: "", name: "", avatar: "" });
       setLoginError("");
       setWrongField("");
     }
-  }, [isOpen, setValues]); // reset form when modal is opened, setValues is a dependency because it's a function from useForm hook
+  }, [isOpen, isLoginMode, setValues]); // reset form when modal is opened or mode changes
 
   return (
     <ModalWithForm
@@ -86,19 +93,19 @@ export default function LoginModal({
       error={loginError}
     >
       <label
-        htmlFor="email"
+        htmlFor={isLoginMode ? "email-login" : "email-register"}
         className={`modal__label ${
           wrongField === "email" ? "modal__label--error" : ""
         }`}
       >
-        Email
+        Email{!isLoginMode ? " *" : ""}
         <input
           type="email"
           name="email"
           className={`modal__input ${
             wrongField === "email" ? "input-error" : ""
           }`}
-          id="email"
+          id={isLoginMode ? "email-login" : "email-register"}
           placeholder="Email"
           onChange={handleChange}
           value={values.email || ""}
@@ -108,19 +115,19 @@ export default function LoginModal({
         />
       </label>
       <label
-        htmlFor="password"
+        htmlFor={isLoginMode ? "password-login" : "password-register"}
         className={`modal__label ${
           wrongField === "password" ? "modal__label--error" : ""
         }`}
       >
-        Password
+        Password{!isLoginMode ? " *" : ""}
         <input
           type="password"
           name="password"
           className={`modal__input ${
             wrongField === "password" ? "input-error" : ""
           }`}
-          id="password"
+          id={isLoginMode ? "password-login" : "password-register"}
           placeholder="Password"
           onChange={handleChange}
           value={values.password || ""}
@@ -129,6 +136,54 @@ export default function LoginModal({
           required
         />
       </label>
+      
+      {!isLoginMode && (
+        <>
+          <label
+            htmlFor="name-register"
+            className={`modal__label ${
+              wrongField === "name" ? "modal__label--error" : ""
+            }`}
+          >
+            Name *
+            <input
+              type="text"
+              name="name"
+              className={`modal__input ${
+                wrongField === "name" ? "input-error" : ""
+              }`}
+              id="name-register"
+              placeholder="Name"
+              onChange={handleChange}
+              value={values.name || ""}
+              minLength="2"
+              maxLength="30"
+              required
+            />
+          </label>
+          <label
+            htmlFor="avatar-register"
+            className={`modal__label ${
+              wrongField === "avatar" ? "modal__label--error" : ""
+            }`}
+          >
+            Avatar URL *
+            <input
+              type="url"
+              name="avatar"
+              className={`modal__input ${
+                wrongField === "avatar" ? "input-error" : ""
+              }`}
+              id="avatar-register"
+              placeholder="Avatar URL"
+              onChange={handleChange}
+              value={values.avatar || ""}
+              required
+            />
+          </label>
+        </>
+      )}
+      
       <div className="modal__auth-switch">
         <button
           type="submit"

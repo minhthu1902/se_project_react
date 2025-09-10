@@ -1,6 +1,8 @@
 import "./ItemModal.css";
+import { useUser } from "../../utils/contexts/UserContext.jsx";
 
 function ItemModal({ activeModal, card, onClose, onDelete }) {
+  const { user } = useUser();
   return (
     <div className={`modal ${activeModal === "preview" && "modal_opened"}`}>
       <div className="modal__content">
@@ -16,15 +18,17 @@ function ItemModal({ activeModal, card, onClose, onDelete }) {
             <p className="modal__weather">Weather: {card.weather}</p>
           </div>
 
-          <div className="modal__delete">
-            <button
-              onClick={() => onDelete(card)}
-              type="button"
-              className="modal__delete-btn"
-            >
-              Delete Item
-            </button>
-          </div>
+          {user && card.owner === user._id && (
+            <div className="modal__delete">
+              <button
+                onClick={() => onDelete(card)}
+                type="button"
+                className="modal__delete-btn"
+              >
+                Delete Item
+              </button>
+            </div>
+          )}
         </div>
       </div>
     </div>

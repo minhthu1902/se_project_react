@@ -21,7 +21,6 @@ import {
   register,
   signin,
   checkToken,
-  refreshToken,
   updateUser,
   addCardLike,
   removeCardLike,
@@ -243,34 +242,6 @@ function App() {
     }
   }, []);
 
-  // Periodic token validation (every 5 minutes)
-  useEffect(() => {
-    if (!user) return;
-
-    const interval = setInterval(async () => {
-      const token = localStorage.getItem("jwt");
-      if (token) {
-        try {
-          await checkToken(token);
-        } catch (error) {
-          console.error("Token validation failed during periodic check:", error);
-          // Try to refresh the token
-          try {
-            const refreshResponse = await refreshToken();
-            if (refreshResponse.token) {
-              localStorage.setItem("jwt", refreshResponse.token);
-              setUser(refreshResponse.user);
-            }
-          } catch (refreshError) {
-            console.error("Token refresh failed:", refreshError);
-            handleLogout();
-          }
-        }
-      }
-    }, 5 * 60 * 1000); // Check every 5 minutes
-
-    return () => clearInterval(interval);
-  }, [user]);
 
   useEffect(() => {
     getWeather(coordinates, APIkey)

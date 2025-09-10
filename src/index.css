@@ -1,2 +1,11 @@
 @import url(./vendor/normalize.css);
 @import url(./vendor/font.css);
+
+html, body {
+  overflow-x: hidden;
+  box-sizing: border-box;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}

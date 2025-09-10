@@ -1,7 +1,9 @@
 .card {
   display: flex;
-  width: 325px;
-  height: 328px;
+  width: 100%;
+  max-width: 325px;
+  min-width: 200px;
+  aspect-ratio: 325/328;
   position: relative;
   cursor: pointer;
   justify-content: center;
@@ -22,7 +24,6 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  z-index: 1;
 }
 
 .card__name {
