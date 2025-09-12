@@ -144,7 +144,7 @@ export default function RegisterModal({
       error={registerError}
     >
       <label
-        htmlFor="email"
+        htmlFor="email-register-modal"
         className={`modal__label ${
           wrongField === "email" ? "modal__label--error" : ""
         }`}
@@ -156,7 +156,7 @@ export default function RegisterModal({
           className={`modal__input ${
             wrongField === "email" ? "input-error" : ""
           }`}
-          id="email"
+          id="email-register-modal"
           placeholder="Email"
           onChange={handleChange}
           value={values.email || ""}
@@ -167,7 +167,7 @@ export default function RegisterModal({
       </label>
 
       <label
-        htmlFor="password"
+        htmlFor="password-register-modal"
         className={`modal__label ${
           wrongField === "password" ? "modal__label--error" : ""
         }`}
@@ -179,7 +179,7 @@ export default function RegisterModal({
           className={`modal__input ${
             wrongField === "password" ? "input-error" : ""
           }`}
-          id="password"
+          id="password-register-modal"
           placeholder="Password"
           onChange={handleChange}
           value={values.password || ""}
@@ -190,7 +190,7 @@ export default function RegisterModal({
       </label>
 
       <label
-        htmlFor="name"
+        htmlFor="name-register-modal"
         className={`modal__label ${
           wrongField === "name" ? "modal__label--error" : ""
         }`}
@@ -202,7 +202,7 @@ export default function RegisterModal({
           className={`modal__input ${
             wrongField === "name" ? "input-error" : ""
           }`}
-          id="name"
+          id="name-register-modal"
           placeholder="Name"
           onChange={handleChange}
           value={values.name || ""}
@@ -213,7 +213,7 @@ export default function RegisterModal({
       </label>
 
       <label
-        htmlFor="avatar"
+        htmlFor="avatar-register-modal"
         className={`modal__label ${
           wrongField === "avatar" ? "modal__label--error" : ""
         }`}
@@ -225,7 +225,7 @@ export default function RegisterModal({
           className={`modal__input ${
             wrongField === "avatar" ? "input-error" : ""
           }`}
-          id="avatar"
+          id="avatar-register-modal"
           placeholder="Avatar URL"
           onChange={handleChange}
           value={values.avatar || ""}

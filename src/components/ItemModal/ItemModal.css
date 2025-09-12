@@ -23,7 +23,7 @@
   display: flex;
   gap: 0px;
   align-items: center;
-  /* top: 106px; */
+  width: 100%;
   min-height: 490px;
   max-width: 498px;
   border-radius: 18px;

@@ -41,25 +41,25 @@ export default function AddItemModal({
       onClose={onClose}
       onSubmit={handleSubmit}
     >
-      <label htmlFor="name" className="modal__label">
+      <label htmlFor="add-item-name" className="modal__label">
         Name
         <input
           type="text"
           name="name"
           className="modal__input"
-          id="name"
+          id="add-item-name"
           placeholder="Name"
           onChange={handleNameChange}
           value={name}
         />
       </label>
-      <label htmlFor="imageUrl" className="modal__label">
+      <label htmlFor="add-item-imageUrl" className="modal__label">
         {" "}
         Image
         <input
           type="url"
           className="modal__input"
-          id="imageUrl"
+          id="add-item-imageUrl"
           placeholder="Image URL"
           onChange={handleImageUrlChange}
           value={imageUrl}
@@ -68,10 +68,10 @@ export default function AddItemModal({
 
       <fieldset className="modal__radio-button">
         <legend className="modal__legend"> Select the weather type: </legend>
-        <label htmlFor="hot" className="modal__label modal__label_type_radio">
+        <label htmlFor="add-item-hot" className="modal__label modal__label_type_radio">
           <input
             type="radio"
-            id="hot"
+            id="add-item-hot"
             name="weather"
             value="hot"
             onChange={handleWeatherChange}
@@ -81,10 +81,10 @@ export default function AddItemModal({
           <span className="modal__radio-text">Hot</span>
         </label>
 
-        <label htmlFor="warm" className="modal__label modal__label_type_radio">
+        <label htmlFor="add-item-warm" className="modal__label modal__label_type_radio">
           <input
             type="radio"
-            id="warm"
+            id="add-item-warm"
             name="weather"
             value="warm"
             onChange={handleWeatherChange}
@@ -94,10 +94,10 @@ export default function AddItemModal({
           <span className="modal__radio-text">Warm</span>
         </label>
 
-        <label htmlFor="cold" className="modal__label modal__label_type_radio">
+        <label htmlFor="add-item-cold" className="modal__label modal__label_type_radio">
           <input
             type="radio"
-            id="cold"
+            id="add-item-cold"
             name="weather"
             value="cold"
             onChange={handleWeatherChange}
